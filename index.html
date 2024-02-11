@@ -27,14 +27,21 @@
 				height: 100vw;
 				text-align: center;
 			}
+			.inner {
+				height: min(100%, 100vh);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 			h1 {
 				color: var(--monk-yellow);
 				text-transform: uppercase;
 				font-size: 4.5vw;
-				padding-top: 2.125rem;
+				line-height: 1;
 			}
 			.play-icon {
-				padding-top: 5rem;
+				display: block;
+				padding-top: 24px;
 			}
 			.play-icon svg {
 				width: 6vw;
@@ -53,6 +60,7 @@
 			}
 			footer {
 				padding-bottom: 2rem;
+				text-align: center;
 			}
 			footer small {
 				font-size: 100%;
@@ -61,11 +69,13 @@
 	</head>
 	<body>
 		<header>
-			<h1>Art Monk</h1>
-			<div class="play-icon">
-				<a href="#player">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v14l11-7z"/></svg>
-				</a>
+			<div class="inner">
+				<div class="centered">
+					<h1>Art Monk</h1>
+					<a class="play-icon" href="#player">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v14l11-7z"/></svg>
+					</a>
+				</div>
 			</div>
 		</header>
 		<section id="player" class="container">
