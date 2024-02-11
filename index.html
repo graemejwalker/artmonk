@@ -1,10 +1,78 @@
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Art Monk</title>
+
+		<style>
+			@font-face {
+				font-family: 'Ministry';
+				src: url('ministry.woff2') format('woff2');
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			:root {
+				--monk-yellow: #ffd451;
+			}
+			body, h1 {
+				margin: 0;
+			}
+			body {
+				font-family: 'Ministry', sans-serif;
+			}
+			header {
+				background: black url('/album-artwork.webp') top center/cover no-repeat;
+				height: 100vw;
+				text-align: center;
+			}
+			h1 {
+				color: var(--monk-yellow);
+				text-transform: uppercase;
+				font-size: 4.5vw;
+				padding-top: 2.125rem;
+			}
+			.play-icon {
+				padding-top: 5rem;
+			}
+			.play-icon svg {
+				width: 6vw;
+				color: var(--monk-yellow);
+			}
+			.container {
+				max-width: 700px;
+				margin: auto;
+			}
+			#player iframe {
+				display: block;
+				border: 0;
+				width: 100%;
+				height: 472px;
+				margin: 2rem 0;
+			}
+			footer {
+				padding-bottom: 2rem;
+			}
+			footer small {
+				font-size: 100%;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Art Monk</h1>
+		<header>
+			<h1>Art Monk</h1>
+			<div class="play-icon">
+				<a href="#player">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.14v14l11-7z"/></svg>
+				</a>
+			</div>
+		</header>
+		<section id="album" class="container">
+			<iframe src="https://bandcamp.com/EmbeddedPlayer/album=3725270042/size=large/bgcol=ffffff/linkcol=ffd451/artwork=none/transparent=true/" seamless><a href="https://artmonkco.bandcamp.com/album/recordings">Recordings by Art Monk</a></iframe>
+		</section>
+		<footer class="container">
+			<small>Copyright Art Monk 2024</small>
+		</footer>
 	</body>
 </html>
